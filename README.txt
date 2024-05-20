@@ -4,6 +4,7 @@ add new application in new version...
 
 run in windows :
 1. please install git bash (https://git-scm.com/downloads)
+2. write (git clone https://github.com/ciscohfs/programming_tools.git) in git bash to download
 2. go tools directory in git bash
 3. write (bash programming_tool.sh) or (./programming_tool.sh) to run tool
 
