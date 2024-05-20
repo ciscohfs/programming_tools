@@ -1,7 +1,7 @@
 #! /bin/bash
-
-read -p "you want install programmong tool ? y/n " answer
-
+sleep 1
+read -p "you want install programmong tools and apps ? y/n " answer
+sleep 2 
 
 
 if [ "$answer" = "y" ];then
@@ -15,6 +15,18 @@ if [ "$answer" = "y" ];then
         echo -ne '#######################   (100%)\r'
         echo -ne '\n'
         curl -O https://dl2.soft98.ir/soft/g/Google.Chrome.125.0.6422.61.x64.zip?1716181986
+        sleep 1
+        read -p "do you have firefox ? y/n" firefox
+        if [ "$firefox" = "n" ];then
+            echo "i download firefox in your directory"
+            echo -ne '#####                     (33%)\r'
+            sleep 1
+            echo -ne '#############             (66%)\r'
+            sleep 1
+            echo -ne '#######################   (100%)\r'
+            echo -ne '\n'
+            curl -O https://dl2.soft98.ir/soft/m/Mozilla.Firefox.126.0.EN.x64.zip?1716232873
+        fi
     else 
         echo "Ok!"
     fi
@@ -56,8 +68,23 @@ if [ "$answer" = "y" ];then
         curl -O https://dl2.soft98.ir/soft/g/Git.for.Windows.2.45.1.x64.rar?1716182167
     else 
         echo "Ok!"
+        read -p "Do you want run tool ? y/n " endtool
+        if [ "$endtool" = y ];then
+            bash programming_tool.sh
+        else
+            echo "Ok!"
+            echo "See you later!"
+        fi
+        echo "See you later!"
     fi
-
     
 
+else
+    read -p "Do you want run tool ? y/n " endtool2
+    if [ "$endtool" = y ];then
+        bash programming_tool.sh
+    else
+        echo "Ok!"
+        echo "See you later!"
+    fi
 fi
