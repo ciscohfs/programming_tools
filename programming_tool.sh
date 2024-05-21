@@ -1,7 +1,7 @@
 #! /bin/bash
 sleep 1
 read -p "you want install programmong tools and apps ? y/n " answer
-sleep 2 
+sleep 1
 
 
 if [ "$answer" = "y" ];then
